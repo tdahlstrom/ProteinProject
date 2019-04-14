@@ -1,4 +1,22 @@
 # ProteinProject
-Software used for accessing data in Gromacs data files.
+Program: averageContactProbabilityInQValueRange.c
+Description: Calculates the probability of a residue being within a range of Q values from a trajectory.
 
-Scripts are used for automating simulations in Gromacs.
+Program: calcQFromContacts.c
+Description: Determines the Q value of each frame of a given trajectory.
+
+Program: probabilityContactInQValueRange.c
+Description: Calculates the probability of a contact being within a range of Q values from a trajectory.
+
+Header: xtcReader.h
+Description: Provides functions to read a traj.xtc (trajectory) file from Gromacs 4.6.7.  Requires (https://github.com/wesbarnett/libxdrfile/tree/2.1 "libxdrfile v2.1.").
+
+Header: contactReader.h
+Description: Provides functions to read a contact file created from (http://smog-server.org "SMOG Server").
+
+Script: mdtoen.csh
+Description: Parses out the LJ-12 energy values into a file.
+
+Script: run_simulation_set.csh
+Description: Automates the starting of Gromacs simulation jobs.  User can edit how many jobs are ran at once.
+Requires: folder_generator.csh, folder_gen_large_number.csh
