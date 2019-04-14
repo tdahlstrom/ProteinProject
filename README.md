@@ -18,5 +18,5 @@
 **Description:** Parses out the LJ-12 energy values into a file.
 
 **Script:** run_simulation_set.csh  
-**Description:** Automates the starting of Gromacs simulation jobs.  User can edit how many jobs are ran at once.
-Requires: folder_generator.csh, folder_gen_large_number.csh
+**Description:** Automates the starting of Gromacs simulation jobs.  User can edit how many jobs are ran at once.  
+**Requires:** folder_generator.csh, folder_gen_large_number.csh
