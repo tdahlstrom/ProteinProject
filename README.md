@@ -9,7 +9,7 @@ Program: probabilityContactInQValueRange.c
 Description: Calculates the probability of a contact being within a range of Q values from a trajectory.
 
 Header: xtcReader.h
-Description: Provides functions to read a traj.xtc (trajectory) file from Gromacs 4.6.7.  Requires [libxdrfile v2.1.](https://github.com/wesbarnett/libxdrfile/tree/2.1).
+Description: Provides functions to read a traj.xtc (trajectory) file from Gromacs 4.6.7.  Requires [libxdrfile v2.1](https://github.com/wesbarnett/libxdrfile/tree/2.1).
 
 Header: contactReader.h
 Description: Provides functions to read a contact file created from [SMOG Server](http://smog-server.org).
