@@ -2,3 +2,4 @@ software/xtcReader/xdrfile.h
 software/xtcReader/xdrfile.c
 software/xtcReader/xdrfile_xtc.h
 software/xtcReader/xdrfile_xtc.c
+tests/test
