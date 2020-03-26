@@ -1,7 +1,10 @@
-void writeQFile(int *qValues, int xtcFrames, char *qFile);
-int* calculateQValues(int xtcFrames, int contacts, float cutoff, struct XtcCoordinates **xtcResidueCoordinates, struct Contact *residueContacts);
-float calculateDistance(struct XtcCoordinates coords1, struct XtcCoordinates coords2);
-int* allocateQValuesMemory(int xtcFrames);
+#include <stdio.h>
+#include <stdlib.h>
+#include <math.h>
+
+#include "calcQFromContacts.h"
+//#include "../xtcReader/xtcReader.h"
+//#include "../contactReader/contactReader.h"
 
 /*
 *	Name: void writeQFile()

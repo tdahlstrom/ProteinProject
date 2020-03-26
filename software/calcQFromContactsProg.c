@@ -25,7 +25,7 @@
 
 #include "headers/xtcReader/xtcReader.h"
 #include "headers/contactReader/contactReader.h"
-#include "headers/calcQFromContacts.h"
+#include "headers/calcQFromContacts/calcQFromContacts.h"
 
 int main(int argc, char *argv[]) {
 	char *xtcfile = argv[3];

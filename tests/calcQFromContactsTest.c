@@ -4,10 +4,14 @@
 
 #include "../software/headers/xtcReader/xtcReader.h"
 #include "../software/headers/contactReader/contactReader.h"
-#include "../software/headers/calcQFromContacts.h"
+#include "../software/headers/calcQFromContacts/calcQFromContacts.h"
 
 int getLinesInFile(char* fileName);
 int* getContentsOfFile(char* fileName, int size);
+
+void cleanUp() {
+	remove("qFile");
+}
 
 Test(calcQFromContacts, Test_calculateDistance) {
 	struct XtcCoordinates coords1, coords2;
@@ -24,7 +28,7 @@ Test(calcQFromContacts, Test_calculateDistance) {
 	cr_assert_eq(5.19615F, distance);
 }
 
-Test(calcQFromContacts, Test_calculateQValues_and_writeQFile) {
+Test(calcQFromContacts, Test_writeQFile, .fini = cleanUp) {
 	int frames = getFrames("./files/xtcFile", 163);
 	struct XtcCoordinates** xtcCoords = getXtcFileCoordinates("./files/xtcFile", 163, frames);
 
@@ -36,25 +40,21 @@ Test(calcQFromContacts, Test_calculateQValues_and_writeQFile) {
 	writeQFile(qValues, frames, "qFile");
 
 	int linesActual = getLinesInFile("qFile");
-	int* contactsActual = getContentsOfFile("./files/qFile", linesActual);
+	int* contactsActual = getContentsOfFile("qFile", linesActual);
 
 	int linesExpected = getLinesInFile("./files/qFile");
 	int* contactsExpected = getContentsOfFile("./files/qFile", linesExpected);
 
 	if(sizeof(contactsExpected) != sizeof(contactsActual)) {
-		remove("qFile");
 		cr_assert_fail("Files are not equal in length.");
 	}
 
 	cr_assert_eq(sizeof(contactsExpected), sizeof(contactsActual));
 	for(int i = 0; i < linesActual; i++) {
 		if(contactsExpected[i] != contactsActual[i]){
-			remove("qFile");
 			cr_assert_fail("Values at line: %i is different.", i+1);
 		}
 	}
-
-	remove("qFile");
 
 	cr_assert(true);
 }

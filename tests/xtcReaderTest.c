@@ -1,7 +1,7 @@
 #include <criterion/criterion.h>
 #include <stdio.h>
 
-#include "../software/xtcReader/xtcReader.h"
+#include "../software/headers/xtcReader/xtcReader.h"
 
 Test(xtcReader, Test_getFrames) {
 	int frames = getFrames("./files/xtcFile", 163);
