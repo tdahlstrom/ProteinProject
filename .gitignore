@@ -1,5 +1,5 @@
-software/xtcReader/xdrfile.h
-software/xtcReader/xdrfile.c
-software/xtcReader/xdrfile_xtc.h
-software/xtcReader/xdrfile_xtc.c
+software/headers/xtcReader/xdrfile.h
+software/headers/xtcReader/xdrfile.c
+software/headers/xtcReader/xdrfile_xtc.h
+software/headers/xtcReader/xdrfile_xtc.c
 tests/test
