@@ -1,11 +1,11 @@
 # ProteinProject
-**Program:** averageContactProbabilityInQValueRange.c  
+**Program:** averageContactProbabilityInQValueRangeProg.c  
 **Description:** Calculates the probability of a residue being within a range of Q values from a trajectory.
 
-**Program:** calcQFromContacts.c  
+**Program:** calcQFromContactsProg.c  
 **Description:** Determines the Q value of each frame of a given trajectory.
 
-**Program:** probabilityContactInQValueRange.c  
+**Program:** probabilityContactInQValueRangeProg.c  
 **Description:** Calculates the probability of a contact being within a range of Q values from a trajectory.
 
 **Header:** xtcReader.h  
