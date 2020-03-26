@@ -1,3 +1,10 @@
+/*
+*	Name: calcQFromContactsTest.c
+*	Author: Thomas Dahlstrom
+*	Date: Mar. 25, 2020
+*	Updated: Mar. 26, 2020
+*/
+
 #include <criterion/criterion.h>
 #include <stdio.h>
 #include <stdlib.h>
@@ -44,16 +51,16 @@ Test(probabilityContactInQValueRangeTest, Test_calculateContactProbability) {
 
 	for(int i = 0; i < contacts; i++) {
 		if(expectedResidueContactsInformation[i].focusResidue != actualResidueContactsInformation[i].focusResidue) {
-			cr_assert_fail("Focused residue incorrect");
+			cr_assert_fail("Focused residue incorrect at line: %i\n", contacts + 1);
 		}
 		if(expectedResidueContactsInformation[i].contactResidue != actualResidueContactsInformation[i].contactResidue) {
-			cr_assert_fail("Contact residue incorrect");
+			cr_assert_fail("Contact residue incorrect at line: %i\n", contacts + 1);
 		}
 		if(expectedResidueContactsInformation[i].probability != actualResidueContactsInformation[i].probability) {
-			cr_assert_fail("Probability incorrect");
+			cr_assert_fail("Probability incorrect at line: %i\n", contacts + 1);
 		}
 		if(expectedResidueContactsInformation[i].totalOccurrences != actualResidueContactsInformation[i].totalOccurrences) {
-			cr_assert_fail("Total occurrences incorrect");
+			cr_assert_fail("Total occurrences incorrect at line: %i\n", contacts + 1);
 		}
 	}
 

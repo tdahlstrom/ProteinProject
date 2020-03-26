@@ -1,3 +1,10 @@
+/*
+*	Name: calcQFromContactsTest.c
+*	Author: Thomas Dahlstrom
+*	Date: Mar. 24, 2020
+*	Updated: Mar. 26, 2020
+*/
+
 #include <criterion/criterion.h>
 #include <stdio.h>
 #include <math.h>
@@ -46,13 +53,13 @@ Test(calcQFromContacts, Test_writeQFile, .fini = cleanUp) {
 	int* contactsExpected = getContentsOfFile("./files/qFile", linesExpected);
 
 	if(sizeof(contactsExpected) != sizeof(contactsActual)) {
-		cr_assert_fail("Files are not equal in length.");
+		cr_assert_fail("Files are not equal in length.\n");
 	}
 
 	cr_assert_eq(sizeof(contactsExpected), sizeof(contactsActual));
 	for(int i = 0; i < linesActual; i++) {
 		if(contactsExpected[i] != contactsActual[i]){
-			cr_assert_fail("Values at line: %i is different.", i+1);
+			cr_assert_fail("Values at line: %i is different.\n", i+1);
 		}
 	}
 

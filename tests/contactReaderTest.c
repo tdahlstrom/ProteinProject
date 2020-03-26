@@ -1,3 +1,10 @@
+/*
+*	Name: contactReaderTest.c
+*	Author: Thomas Dahlstrom
+*	Date: Apr. 15, 2019
+*	Updated: Mar. 26, 2020
+*/
+
 #include <criterion/criterion.h>
 #include <stdio.h>
 
