@@ -1,3 +1,10 @@
+/*
+*	Name: probabilityContactInQValueRange.h
+*	Author: Thomas Dahlstrom
+*	Date: Mar. 25, 2020
+*	Updated: Mar. 26, 2020
+*/
+
 #ifndef PROBABILITY_CONTACT_IN_Q_VALUE_RANGE
 #define PROBABILITY_CONTACT_IN_Q_VALUE_RANGE
 

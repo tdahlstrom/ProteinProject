@@ -2,7 +2,7 @@
 *	Name: probabilityContactInQValueRange.c
 *	Author: Thomas Dahlstrom
 *	Date: Dec. 02, 2017
-*	Updated: Dec. 28, 2018
+*	Updated: Mar. 26, 2020
 *
 *	Summary of expected functionality:
 *		Given a trajectory file, contact file, and a range of Q values, the program will

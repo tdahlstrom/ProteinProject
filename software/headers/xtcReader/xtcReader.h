@@ -1,17 +1,12 @@
-#ifndef XTC_READER
-#define XTC_READER
-
 /*
 *	Name: xtcReader.h
 *	Author: Thomas Dahlstrom
 *	Date: Mar. 24, 2017
-*	Updated: Nov. 02, 2017
-*
-*	Dependencies: libxdrfile v2.1
-*
-*	Summary of expected functionality:
-*		Provides functions to read a traj.xtc (trajectory) file from Gromacs 4.6.7.
+*	Updated: Mar. 26, 2020
 */
+
+#ifndef XTC_READER
+#define XTC_READER
 
 struct XtcCoordinates {
 	float x;

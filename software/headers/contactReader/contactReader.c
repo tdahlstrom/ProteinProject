@@ -1,3 +1,16 @@
+/*
+*	Name: contactReader.c
+*	Author: Thomas Dahlstrom
+*	Date: Mar. 25, 2020
+*	Updated: Mar. 26, 2020
+*
+*	Summary of expected functionality:
+*		Provides functions to read a contact file created from http://smog-server.org/.
+*	Notes:
+*		The residue pairs in the contact file start at a value of 1.  So, residue 1 in
+*		the contact file is the first residue in the polypeptide.
+*/
+
 #include <stdio.h>
 #include <stdlib.h>
 

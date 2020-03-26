@@ -1,3 +1,10 @@
+/*
+*	Name: calcQFromContacts.h
+*	Author: Thomas Dahlstrom
+*	Date: Mar. 25, 2020
+*	Updated: Mar. 26, 2020
+*/
+
 #ifndef CALC_Q_FROM_CONTACTS
 #define CALC_Q_FROM_CONTACTS
 

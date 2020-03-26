@@ -1,3 +1,15 @@
+/*
+*	Name: xtcReader.c
+*	Author: Thomas Dahlstrom
+*	Date: Mar. 25, 2020
+*	Updated: Mar. 26, 2020
+*
+*	Dependencies: libxdrfile v2.1
+*
+*	Summary of expected functionality:
+*		Provides functions to read a traj.xtc (trajectory) file from Gromacs 4.6.7.
+*/
+
 #include <stdio.h>
 #include <stdlib.h>
 

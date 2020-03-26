@@ -1,10 +1,15 @@
+/*
+*	Name: calcQFromContacts.c
+*	Author: Thomas Dahlstrom
+*	Date: Mar. 25, 2020
+*	Updated: Mar. 26, 2020
+*/
+
 #include <stdio.h>
 #include <stdlib.h>
 #include <math.h>
 
 #include "calcQFromContacts.h"
-//#include "../xtcReader/xtcReader.h"
-//#include "../contactReader/contactReader.h"
 
 /*
 *	Name: void writeQFile()

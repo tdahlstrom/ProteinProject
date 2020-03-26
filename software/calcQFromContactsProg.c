@@ -2,7 +2,7 @@
 *	Name: calcQFromContacts.c
 *	Author: Thomas Dahlstrom
 *	Date: Nov. 01, 2017
-*	Updated: Nov. 02, 2017
+*	Updated: Mar. 26, 2020
 *
 *	Summary of expected functionality:
 *		Reads contacts from a provided contacts file.  Then, reads the traj.xtc file.

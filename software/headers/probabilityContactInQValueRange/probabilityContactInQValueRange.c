@@ -1,3 +1,10 @@
+/*
+*	Name: probabilityContactInQValueRange.c
+*	Author: Thomas Dahlstrom
+*	Date: Mar. 25, 2020
+*	Updated: Mar. 26, 2020
+*/
+
 #include <stdio.h>
 #include <stdlib.h>
 
