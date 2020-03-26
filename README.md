@@ -23,6 +23,6 @@
 
 # Running Tests
 From the tests folder run:
-```bash
+```
 make {name of test file}
 ```
