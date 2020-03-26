@@ -28,7 +28,7 @@ struct TSRange {
 	int high;
 };
 
-struct ContactInformation* calculateContactProbability(int xtcFrames, int contacts, struct XtcCoordinates **xtcResidueCoordinates, char* contactFile, struct QRange qRange, struct TSRange timeRange, int* qValues);
+struct ContactInformation* calculateContactProbability(int xtcFrames, int contacts, struct XtcCoordinates **xtcResidueCoordinates, char* contactFile, struct QRange qRange, struct TSRange timeRange, int* qValues, float cutOff);
 struct ContactInformation* createResidueContactInformation(int contacts, struct Contact *residueContacts);
 struct ContactInformation* allocateContactInformationMemory(int contacts);
 

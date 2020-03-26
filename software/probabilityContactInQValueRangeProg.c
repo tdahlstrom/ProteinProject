@@ -36,8 +36,9 @@ int main(int argc, char *argv[]) {
 	qRange.low = atoi(argv[1]), qRange.high = atoi(argv[2]);
 	timeRange.low = atoi(argv[3]), timeRange.high = atoi(argv[4]);
 
-	float cutoff = atof(argv[7]);
-	int residues = atoi(argv[8]);
+	int residues = atoi(argv[7]);
+	float cutOff = atof(argv[8]);
+
 	int *qValues, xtcFrames, contacts;
 
 	struct XtcCoordinates **xtcResidueCoordinates;
@@ -57,10 +58,10 @@ int main(int argc, char *argv[]) {
 	residueContacts = getContactFileContacts(contactFile);
 
 	// Creates Q values for every frame in the traj.xtc file
-	qValues = calculateQValues(xtcFrames, contacts, cutoff, xtcResidueCoordinates, residueContacts);
+	qValues = calculateQValues(xtcFrames, contacts, cutOff, xtcResidueCoordinates, residueContacts);
 
 	// Records total occurrences of each contact and calculates the probability of the contact occuring
-	residueContactsInformation = calculateContactProbability(xtcFrames, contacts, xtcResidueCoordinates, contactFile, qRange, timeRange, qValues);
+	residueContactsInformation = calculateContactProbability(xtcFrames, contacts, xtcResidueCoordinates, contactFile, qRange, timeRange, qValues, cutOff);
 
 	// Output for all information on that contacts
 	for(int i = 0; i < contacts; i++) {

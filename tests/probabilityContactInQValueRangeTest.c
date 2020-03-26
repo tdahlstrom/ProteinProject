@@ -21,7 +21,9 @@ Test(probabilityContactInQValueRangeTest, Test_calculateContactProbability) {
 	int contacts = getAmountOfContacts("./files/contactFile");
 	struct Contact* residueContacts = getContactFileContacts("./files/contactFile");
 
-	int *qValues = calculateQValues(frames, contacts, 1.0, xtcCoords, residueContacts);
+	float cutOff = 1.0f;
+
+	int *qValues = calculateQValues(frames, contacts, cutOff, xtcCoords, residueContacts);
 
 	struct QRange qRange;
 	qRange.low = 300;
@@ -33,9 +35,10 @@ Test(probabilityContactInQValueRangeTest, Test_calculateContactProbability) {
 
 	struct ContactInformation *actualResidueContactsInformation =
 			calculateContactProbability(frames, contacts, xtcCoords, "./files/contactFile",
-					qRange, timeRange, qValues);
+					qRange, timeRange, qValues, cutOff);
 
-	struct ContactInformation *expectedResidueContactsInformation = (struct ContactInformation*) malloc(sizeof(struct ContactInformation) * contacts);
+	struct ContactInformation *expectedResidueContactsInformation =
+			(struct ContactInformation*) malloc(sizeof(struct ContactInformation) * contacts);
 
 	FILE *file;
 	file = fopen("./files/contactInformation", "r");
@@ -49,20 +52,25 @@ Test(probabilityContactInQValueRangeTest, Test_calculateContactProbability) {
 		fscanf(file, "%i", &expectedResidueContactsInformation[i].totalOccurrences);
 	}
 
+	fclose(file);
+
 	for(int i = 0; i < contacts; i++) {
 		if(expectedResidueContactsInformation[i].focusResidue != actualResidueContactsInformation[i].focusResidue) {
-			cr_assert_fail("Focused residue incorrect at line: %i\n", contacts + 1);
+			cr_assert_fail("Focused residue incorrect at line: %i\n", i + 1);
 		}
 		if(expectedResidueContactsInformation[i].contactResidue != actualResidueContactsInformation[i].contactResidue) {
-			cr_assert_fail("Contact residue incorrect at line: %i\n", contacts + 1);
+			cr_assert_fail("Contact residue incorrect at line: %i\n", i + 1);
 		}
 		if(expectedResidueContactsInformation[i].probability != actualResidueContactsInformation[i].probability) {
-			cr_assert_fail("Probability incorrect at line: %i\n", contacts + 1);
+			cr_assert_fail("Probability incorrect at line: %i\n", i + 1);
 		}
 		if(expectedResidueContactsInformation[i].totalOccurrences != actualResidueContactsInformation[i].totalOccurrences) {
-			cr_assert_fail("Total occurrences incorrect at line: %i\n", contacts + 1);
+			cr_assert_fail("Total occurrences incorrect at line: %i\n", i + 1);
 		}
 	}
 
 	cr_assert(true);
+
 }
+
+

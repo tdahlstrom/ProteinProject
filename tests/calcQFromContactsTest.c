@@ -42,7 +42,7 @@ Test(calcQFromContacts, Test_writeQFile, .fini = cleanUp) {
 	int contacts = getAmountOfContacts("./files/contactFile");
 	struct Contact* residueContacts = getContactFileContacts("./files/contactFile");
 
-	int *qValues = calculateQValues(frames, contacts, 1.0, xtcCoords, residueContacts);
+	int *qValues = calculateQValues(frames, contacts, 1.0f, xtcCoords, residueContacts);
 
 	writeQFile(qValues, frames, "qFile");
 

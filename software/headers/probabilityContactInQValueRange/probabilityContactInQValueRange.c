@@ -32,7 +32,7 @@
 *				containing values for every variable
 */
 
-struct ContactInformation* calculateContactProbability(int xtcFrames, int contacts, struct XtcCoordinates **xtcResidueCoordinates, char* contactFile, struct QRange qRange, struct TSRange timeRange, int* qValues) {
+struct ContactInformation* calculateContactProbability(int xtcFrames, int contacts, struct XtcCoordinates **xtcResidueCoordinates, char* contactFile, struct QRange qRange, struct TSRange timeRange, int* qValues, float cutOff) {
 
 	// Populates an array of struct ContactInformation; size being the amount of contacts
 	struct ContactInformation* residueContactsInformation = createResidueContactInformation(contacts, getContactFileContacts(contactFile));
@@ -52,7 +52,7 @@ struct ContactInformation* calculateContactProbability(int xtcFrames, int contac
 
 					// If the distance between the residue pair is within the cutoff value
 					if(calculateDistance(xtcResidueCoordinates[i][residueContactsInformation[j].focusResidue-1],
-					   xtcResidueCoordinates[i][residueContactsInformation[j].contactResidue-1]) <= 1.2) {
+					   xtcResidueCoordinates[i][residueContactsInformation[j].contactResidue-1]) <= cutOff) {
 
 						// Increase the total occurrences of the contact by 1
 						residueContactsInformation[j].totalOccurrences++;
