@@ -1,5 +1,5 @@
 /*
-*	Name: contactReaderTest.c
+*	Name: xtcReaderTest.c
 *	Author: Thomas Dahlstrom
 *	Date: Apr. 23, 2019
 *	Updated: Mar. 26, 2020

@@ -1,5 +1,5 @@
 /*
-*	Name: calcQFromContactsTest.c
+*	Name: probabilityContactInQValueRangeTest.c
 *	Author: Thomas Dahlstrom
 *	Date: Mar. 25, 2020
 *	Updated: Mar. 26, 2020
