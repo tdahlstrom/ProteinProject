@@ -21,8 +21,15 @@
 **Script:** run_simulation_set.csh  
 **Description:** Automates the starting of Gromacs simulation jobs.  User can edit how many jobs are ran at once.  
 
+# Compiling Source
+From the software folder run:
+```
+make {name of program file}
+```
+
 # Running Tests
 From the tests folder run:
 ```
 make {name of test file}
+./test
 ```

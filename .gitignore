@@ -3,3 +3,6 @@ software/headers/xtcReader/xdrfile.c
 software/headers/xtcReader/xdrfile_xtc.h
 software/headers/xtcReader/xdrfile_xtc.c
 tests/test
+software/averageContactProbabilityInQValueRangeProg
+software/calcQFromContactsProg
+software/probabilityContactInQValueRangeProg
